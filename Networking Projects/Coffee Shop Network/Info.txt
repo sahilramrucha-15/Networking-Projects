@@ -1,0 +1,45 @@
+VLANs were created on the L2 switch to isolate traffic. Router-on-a stick is being used for communication between different VLANs
+
+VLAN 10 - Is a VLAN created for the OFFICE
+VLAN 20 - Is a VLAN created for the front house
+VLAN 90 - Is a VLAN created for switch management
+VLAN 99 - Is a VLAN created for guest wifi
+
+VLAN 10 - fa0/2-fa0/10
+VLAN 20 - fa0/11-fa/20
+VLAN 99 - fa0/21
+
+The Router was configured with subinterfaces for each VLAN
+
+VLAN 10 - g0/0/10 192.168.10.1/24
+VLAN 20 - g0/0.20 192.168.20.1/24
+VLAN 90 - g0/0.90 192.168.90.1/24
+VLAN 99 - g0/0.99 192.168.99.1/24
+
+Each VLAN has had its default gateway manually configiured to these corresponding sub-interfaces.
+
+SWITCH 1 can be accessed remotely via SSH using the IP 192.168.99.2
+Router 1 can be accessed remotely via SSH using any of the subinterface IPs
+
+Username : admin Password : cisco123
+
+Console ports have been secured with a password and priv exec mode has as well, a banner has been configured to alert that unauthorised access is not permitted.
+
+DHCP Pools for VLAN 10,20 and 99 were configured.
+
+VLAN 10 - 192.168.10.1/24-192.168.10.253
+VLAN 20 - 192.168.20.1/24-192.168.20.253
+VLAN 99 - 192.168.99.1/24-192.168.99.254
+
+192.168.10.254 was excluded from the DHCP pool because it is the IP for the printer, that will be manually assigned
+192.168.20.254 was excluded from the DHCP pool because it is the IP for the recpit printer, that will be manually assigned
+
+Extended ACLs were created to prevent VLANs from being able to ping and communicate with each other. An extended ACL was also configured on g0/1 interface
+that would connect to the ISP.The ACL prevent all unsolicitated incoming traffic, while allowing all TCP established connections to pass through.
+
+
+
+
+
+
+ 

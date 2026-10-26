@@ -1,0 +1,11 @@
+The router has been configured with inter-vlan routing,has also be configured to work as a DHCP server
+
+Subinterfaces have been created to act as default gateways for each respective vlan
+
+g0/0.10 192.168.10.1 255.255.255.0 is the default gateway for vlan 10
+
+g0/0.20 192.168.20.1 255.255.255.0 is the default gateway for vlan 20
+
+g0/0 192.168.1.1 255.255.255.0 is the default gateway for vlan 1
+
+
