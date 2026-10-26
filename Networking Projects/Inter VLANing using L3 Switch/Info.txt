@@ -1,3 +1,0 @@
-Trunks were created from SW1 and SW2 to L3 Switch. 2 SVIs were configured on the L3 switch.
-VLAN 10 was configured with the IP 192.168.10.1/24 and VLAN 20 with 192.168.20.1/24.
-VLAN 10 and 20 were created on both L2 switches are ports were configured.
