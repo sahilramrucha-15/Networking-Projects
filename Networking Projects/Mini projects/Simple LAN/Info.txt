@@ -1,0 +1,6 @@
+This is a simple LAN, where the router has been configured to work as DHCP server.
+
+g0/0/0 - 192.168.1.1 255.255.255.0
+
+g0/0/1 - 192.168.2.1 255.255.255.0 
+

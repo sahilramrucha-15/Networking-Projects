@@ -1,0 +1,2 @@
+R1 and R3 were configured with static routes to allow them to communicate with each other and a deafult route between R1 and R2 was configured,the same with R3 and R2.
+

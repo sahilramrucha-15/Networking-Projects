@@ -1,0 +1,4 @@
+Router configured with sub interfaces g0/0.10 - 192.168.10.1 and g0/0.20 - 192.168.20.1.
+VLANs 10 and 20 were created and use subinterfaces for Inter Vlaning
+VLAN 10 uses 192.168.10.1, VLAN 20 uses 192.168.20.1
+DHCP has also be configured on the router.
